@@ -1,15 +1,15 @@
-import React , {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/App.css';
 import ChildComponent from './ChildComponent';
 const App = () => {
- //code here
-
+  //code here
+  const [inputValue, setInputValue] = useState(0)
   return (
     <div id="main">
-      <ChildComponent /> 
-       <input id='input' onChange={} />
-    
-      <p id='output'>{}</p>
+      <ChildComponent />
+      <input id='input' onChange={(event) => setInputValue(event.target.value)} />
+
+      <p id='output'>{Math.pow(inputValue, 2)}</p>
     </div>
   )
 }
